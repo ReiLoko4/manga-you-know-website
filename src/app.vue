@@ -1,0 +1,5 @@
+<template>
+  <Topbar />
+  <NuxtPage />
+</template>
+
