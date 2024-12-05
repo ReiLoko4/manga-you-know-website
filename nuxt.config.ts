@@ -1,12 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  srcDir: 'src/',
+  srcDir: "src/",
   routeRules: {
     // prerender index route by default
-    '/': { prerender: true },
+    "/": { prerender: true },
   },
-
-  modules: ['@nuxt/ui'],
-  compatibilityDate: '2024-10-13',
+  css: ["@/css/app.css"],
+  modules: ["@nuxt/ui", "@nuxt/image"],
+  compatibilityDate: "2024-10-13",
 });

@@ -1,21 +1,22 @@
 <script lang="ts" setup>
   const links = [
-    { name: 'Home', to: '/', icon: 'tabler:square-letter-m' },
-    { name: 'About', to: '/about', icon: 'heroicons-outline:information-circle' },
-    { name: 'Contact', to: '/contact', icon: 'mdi:github-box' },
-    { name: 'Register', to: '/register' },
-  ]
+    { label: "Home", to: "/", icon: "tabler:square-letter-m" },
+    {
+      to: "https://github.com/manga-you-know/desktop",
+      target: "_blank",
+      icon: "mdi:github-box",
+    },
+    {
+      to: "https://discord.gg/FK37mJtFD4",
+      target: "_blank",
+      icon: "mdi:discord",
+    },
+  ];
 </script>
 
 <template>
-  <div>
-    <UHorizontalNavigation 
-      :links="links"
-      class="w-full flex justify-end"
-    >
-      <template #default="{ link }">
-        <span class="group-hover:text-primary relative">{{ link.name }}</span>
-      </template>
-    </UHorizontalNavigation>
+  <div class="w-full my-12 flex items-center justify-between">
+    <NuxtImg src="icon.png" class="h-20" />
+    <UNavigationMenu class="w-96" color="neutral" highlight :items="links" />
   </div>
 </template>
